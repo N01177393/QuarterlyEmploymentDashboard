@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>@Page.Title</title> <!--This is what shows on the tab, add this to every view-->
+</head>
+<body>
+    <!--Begin navigation bar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="~/Views/Dashboard/Index.cshtml">Challenge Enterprises</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <!-- Dashboard -->
+                <@Html.ActionLink("Challenge Enterprises", "Index", "Dashboard", new { area = "" }, new { @class = "navbar-brand" }) />
+            </ul>
+            <!--Authenication has a separate layout-->
+        </div>
+    </nav>
+    <!--End navigation bar-->
+    <div>
+        @RenderBody() <!--DO NOT DELETE THIS! WILL NOT COMPILE WITHOUT THIS STATEMENT.-->
+    </div>
+</body>
+</html>
