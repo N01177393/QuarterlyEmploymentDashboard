@@ -23,9 +23,11 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year Challenge Enterprises of North Florida</p>
+                @Html.ActionLink("Return to Dashboard", "Index", "Dashboard", null, new { @class = "btn pull-left" })
+                @Html.ActionLink("Add a New User", "Index", "Authentication", null, new { @class = "btn pull-right" })
+            <hr />
+            <p class="text-center">&copy; @DateTime.Now.Year Challenge Enterprises of North Florida</p>
         </footer>
     </div>
 </body>
