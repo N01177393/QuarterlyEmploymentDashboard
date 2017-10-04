@@ -1,3 +1,5 @@
-﻿.btn-right{
-    align: right; 
+﻿.jumbotron{
+    background-image: url("~/Images/Jumbo.png");
+    background-color: darkblue; 
+    text-decoration-color: crimson; 
 }

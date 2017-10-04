@@ -4,16 +4,19 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="~/Content/StyleSheet.css" rel="stylesheet" />-->
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery-1.9.1.min.js"></script>
     <title>@Page.Title</title>
 </head>
 <body>
     <div class="container">
+        <!--Text at the top-->
         <div class="jumbotron text-center">
             <h3>Challenge Enterprises of North Florida</h3>
             <p>To promote the Power of People and Possibilities for individuals living with disabilities.</p>
         </div>
+        <!--Buttons for reach report-->
         <div class="btn-group-justified">
             @Html.ActionLink("New Hires Report", "Index", "NewHiresReport", null, new { @class = "btn btn-default" })
             @Html.ActionLink("Quarterly Report", "Index", "QuarterlyReport", null, new { @class = "btn btn-default" })
@@ -24,9 +27,12 @@
     <div class="container body-content">
         @RenderBody()
         <footer>
+                <!--Button to return to dashboard-->
                 @Html.ActionLink("Return to Dashboard", "Index", "Dashboard", null, new { @class = "btn btn-default pull-left" })
+                <!--Button to add user-->
                 @Html.ActionLink("Add a New User", "Index", "Authentication", null, new { @class = "btn btn-default pull-right" })
-            <hr />
+            <br /><hr /> <!--Break and line between buttons and text-->
+            <!--Text at the bottom-->
             <p class="text-center">&copy; @DateTime.Now.Year Challenge Enterprises of North Florida</p>
         </footer>
     </div>
