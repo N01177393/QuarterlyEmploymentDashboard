@@ -2,33 +2,31 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <title>@Page.Title</title> <!--This is what shows on the tab, add this to every view-->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <title>@Page.Title</title>
 </head>
 <body>
-    <!--Begin navigation bar -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                @Html.ActionLink("Challenge Enterprises", "Index", "Dashboard", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <ul class="nav navbar-nav">
-                <!--Dashboard-->
-                <li class="active">@Html.ActionLink("Dashboard", "Index", "Dashboard")</li>
-                <li>@Html.ActionLink("New Hires", "Index", "NewHiresReport")</li>
-                <li>@Html.ActionLink("Quarterly", "Index", "QuarterlyReport")</li>
-                <li>@Html.ActionLink("Raises & Transfers", "Index", "RTReport")</li>
-                <li>@Html.ActionLink("Sales", "Index", "SalesReport")</li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span>Add a User</a></li>
-            </ul>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h3>Challenge Enterprises of North Florida</h3>
+            <p>To promote the Power of People and Possibilities for individuals living with disabilities.</p>
         </div>
-    </nav> 
-    <!--End navigation bar-->
-    <div>
-        @RenderBody() <!--DO NOT DELETE THIS! WILL NOT COMPILE WITHOUT THIS STATEMENT.-->
+        <div class="btn-group-justified">
+            @Html.ActionLink("New Hires Report", "Index", "NewHiresReport", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Quarterly Report", "Index", "QuarterlyReport", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Sales Report", "Index", "SalesReport", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Raises & Transfers Report", "Index", "RTReport", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year Challenge Enterprises of North Florida</p>
+        </footer>
     </div>
 </body>
 </html>
