@@ -16,7 +16,7 @@
             <h3>Challenge Enterprises of North Florida</h3>
             <p>To promote the Power of People and Possibilities for individuals living with disabilities.</p>
         </div>
-        <!--Buttons for reach report-->
+        <!--Buttons for each report-->
         <div class="btn-group-justified">
             @Html.ActionLink("New Hires Report", "Index", "NewHiresReport", null, new { @class = "btn btn-default" })
             @Html.ActionLink("Quarterly Report", "Index", "QuarterlyReport", null, new { @class = "btn btn-default" })
@@ -30,6 +30,7 @@
                 <!--Button to return to dashboard-->
                 @Html.ActionLink("Return to Dashboard", "Index", "Dashboard", null, new { @class = "btn btn-default pull-left" })
                 <!--Button to add user-->
+                <!--Value, View name, Folder name-->
                 @Html.ActionLink("Add a New User", "Index", "Authentication", null, new { @class = "btn btn-default pull-right" })
             <br /><hr /> <!--Break and line between buttons and text-->
             <!--Text at the bottom-->
